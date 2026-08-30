@@ -1,0 +1,19 @@
+{
+"version": 2,
+"builds": [
+{
+"src": "api/**/*.js",
+"use": "@vercel/node"
+}
+],
+"routes": [
+{
+"src": "/api/upload",
+"dest": "/api/upload.js"
+},
+{
+"src": "/api/audio/(.*)",
+"dest": "/api/audio.js?filename=$1"
+}
+]
+}
